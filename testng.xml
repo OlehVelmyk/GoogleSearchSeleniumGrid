@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Tests Run" verbose="1" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="com.google.logging.TestStatuses"></listener>
+    </listeners>
+
+    <test name=" [Mozilla Firefox]">
+        <parameter name="browser" value="firefox"/>
+        <packages>
+            <package name="com.google.tests"></package>
+        </packages>
+    </test>
+
+<!--    <test name=" [Opera 106.0]">-->
+<!--        <parameter name="browser" value="opera"/>-->
+<!--        <packages>-->
+<!--            <package name="com.google.tests"></package>-->
+<!--        </packages>-->
+<!--    </test>-->
+
+    <test name=" [Google Chrome]">
+        <parameter name="browser" value="chrome"/>
+        <packages>
+            <package name="com.google.tests"></package>
+        </packages>
+    </test>
+
+    <test name="Microsoft Edge">
+        <parameter name="browser" value="MicrosoftEdge"/>
+        <packages>
+            <package name="com.google.tests"></package>
+        </packages>
+    </test>
+</suite>
